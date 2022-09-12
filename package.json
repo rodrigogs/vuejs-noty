@@ -1,7 +1,7 @@
 {
-  "name": "vuejs-noty",
-  "version": "0.1.4",
-  "description": "Noty plugin for Vue.js 2",
+  "name": "@rodrigogs/vuejs-noty",
+  "version": "0.1.5-beta-2",
+  "description": "Noty plugin for Vue.js 2 and 3",
   "main": "./dist/vuejs-noty.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --config ./build/webpack.dev.conf.js --content-base dev/ --port 8080",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renoguyon/vuejs-noty.git"
+    "url": "git+https://github.com/rodrigogs/vuejs-noty.git"
   },
   "keywords": [
     "vuejs",
@@ -22,9 +22,9 @@
   "author": "Reno Guyon <reno.guyon@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/renoguyon/vuejs-noty/issues"
+    "url": "https://github.com/rodrigogs/vuejs-noty/issues"
   },
-  "homepage": "https://github.com/renoguyon/vuejs-noty#readme",
+  "homepage": "https://github.com/rodrigogs/vuejs-noty#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
@@ -42,7 +42,6 @@
     "rimraf": "^2.6.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.8",
-    "vue": "^2.3.2",
     "vue-loader": "^11.3.4",
     "vue-style-loader": "^2.0.5",
     "vue-template-compiler": "^2.2.6",
@@ -53,7 +52,16 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0"
   },
+  "peerDependencies": {
+    "vue": ">=2.7.10 || <=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
   "dependencies": {
-    "noty": "^3.1.0"
+    "noty": "^3.1.0",
+    "vue-demi": "^0.13.11"
   }
 }

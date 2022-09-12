@@ -1,5 +1,5 @@
-# vuejs-noty
-A Vue JS wrapper around [Noty](http://ned.im/noty/). Developped for Vue 2.
+# @rodrigogs/vuejs-noty
+A Vue JS wrapper around [Noty](http://ned.im/noty/). Developped for Vue 2 and 3.
 
 ## Getting Started
 
@@ -87,7 +87,7 @@ Vue.use(VueNoty, {
 ```
 
 #### Config override
- 
+
 All of the alert methods can accept a config object as second parameter if you need to override the defaults. Example:
 
 ```js

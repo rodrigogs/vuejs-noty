@@ -1,3 +1,4 @@
+import { isVue2 } from 'vue-demi'
 import Noty from 'noty'
 import './styles.less'
 
@@ -49,10 +50,20 @@ const VueNoty = {
   }
 }
 
+function installVue2(Vue, options) {
+  const noty = VueNoty.setOptions(options)
+  Vue.prototype.$noty = noty
+  Vue.noty = noty
+}
+
+function installVue3(app, options) {
+  const noty = VueNoty.setOptions(options)
+  app.config.globalProperties.$noty = noty
+  app.noty = noty
+
+  app.provide('noty', noty)
+}
+
 export default {
-  install: function (Vue, opts) {
-    const noty = VueNoty.setOptions(opts)
-    Vue.prototype.$noty = noty
-    Vue.noty = noty
-  }
+  install: isVue2 ? installVue2 : installVue3
 }
